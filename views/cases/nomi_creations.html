@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/app.css" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FAVICONS -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Portfolio" />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <!-- prettier-ignore -->
+    % include('components/header_component')
+    <section class="bg-myBeige">
+      <div class="mx-auto bg-mylightBlue">
+        <div class="flex pt-4 pl-4 pb-4">
+          <div class="w-5 h-5 text-myBlue">
+            % include(global_content['ui_icons']['arrow'])
+          </div>
+          <a
+            href="/#portfolio"
+            class="group transition duration-300 cursor-pointer text-sm hover:scale-105 font-bold ease-in-out text-myBlue"
+          >
+            Tilbage
+            <span
+              class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-myBlue"
+            ></span>
+          </a>
+        </div>
+      </div>
+      <div class="space_y_standard mx-auto">
+        <div class="flex flex-col">
+            <div class="md:col-span-2 h-full relative">
+              <div class="relative md:h-[600px] lg:h-[800px]">
+                <img
+                  src="/assets/images/portfolio/nomi_mockup.jpg"
+                  alt="Nomi Creations' hjemmeside som ses på computer, tablet og mobil."
+                  class="object-cover w-full h-full"
+                />
+              </div>
+              <div class="absolute top-4 left-4 z-10 md:block">
+                <div class="space-y-2">
+                  <p id="decorative_header">Webshop</p>
+                  <h2>Nomi Creations</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-mylightBlue">
+      <div
+        class="flex flex-col gap-y-6 md:gap-y-8 width_standard padding_y_standard space_y_standard mx-auto"
+      >
+        <div
+          class="w-full flex flex-col md:flex-row gap-10 md:gap-20 items-start"
+        >
+          <div class="flex flex-col gap-y-6 md:gap-y-8 md:w-2/3 w-full">
+            <div class="space-y-2">
+              <p id="decorative_header">Processen</p>
+              <h2>Hvad har jeg udført?</h2>
+            </div>
+            <div class="space-y-6">
+              <div class="space-y-2">
+                <p id="paragraph_text">
+                  Nomi Creations er en webshop, der specialiserer sig i
+                  børneplakater. Jeg har været med fra begyndelsen og har
+                  leveret en omfattende løsning, der inkluderer design af logo,
+                  5. element og visuel identitet. Jeg har også udviklet en
+                  skræddersyet webplatform, der præcist matcher kundens vision
+                  og ønsker for webshoppen.
+                </p>
+              </div>
+              <div class="space-y-2">
+                <p id="paragraph_text">
+                  For denne case har jeg desuden udført dybdegående analyser og
+                  omfattende tests af hjemmesiden, specifikt rettet mod Nomi
+                  Creations’ målgruppe. Dette sikrer en optimal brugeroplevelse
+                  og effektiv målretning af produkterne til de rette kunder.
+                </p>
+              </div>
+
+              <div class="w-full md:w-fit lg:w-full xl:w-fit pt-6">
+                <a href="https://nomicreations.dk/" target="_blank">
+                  <button type="button" id="primary_button">Se webshop</button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col items-center bg-myBeige md:w-1/3 w-full py-8 rounded-lg"
+          >
+            <div class="text-myBlue space-y-4 text-left">
+              <h5 class="text-myBlue">Services udført:</h5>
+              <li>Visuel identitet</li>
+              <li>Logo</li>
+              <li>Unikt 5. element</li>
+              <li>Designmanual</li>
+              <li>Webshop</li>
+              <li>Grafisk design af tryksager</li>
+              <li>Dybdegående analyser og tests</li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    % include('components/footer_component')
+
+    <!-- SCRIPT -->
+    <script src="/static/script.js"></script>
+  </body>
+</html>

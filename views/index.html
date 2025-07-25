@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/app.css" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FAVICONS -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Portfolio" />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <!-- prettier-ignore -->
+    % include('components/header_component') 
+    % include('sections/hero_section')
+    % include('sections/skills_section')
+
+    <section id="portfolio" class="bg-myBeige">
+      <div class="width_standard padding_y_standard space-y-24 mx-auto">
+        <div class="flex justify-center">
+          <div
+            class="lg:w-2/3 flex justify-center flex-col text-center gap-y-4 md:gap-y-6"
+          >
+            <h2 class="text-myBlue">{{ portfolio_content["header_text"] }}</h2>
+            <p class="text-myBlue">{{ portfolio_content["subheader_text"] }}</p>
+          </div>
+        </div>
+        % include('sections/cases_section')
+      </div>
+    </section>
+
+    <!-- prettier-ignore -->
+    % include('sections/team_section')
+    % include('sections/testimonials_section')
+
+    <section class="bg-mylightBlue">
+      <div
+        class="width_standard padding_y_standard mx-auto space-y-16 md:space-y-10 lg:space-y-16"
+      >
+        % include('sections/contact_form_section')
+      </div>
+    </section>
+
+    % include('components/footer_component')
+
+    <!-- SCRIPT -->
+    <script src="/static/script.js"></script>
+  </body>
+</html>
